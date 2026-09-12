@@ -42,9 +42,11 @@ or a per-language mapping (missing languages fall back to `en`):
 - `TBA` renders as a highlighted placeholder, localized to `未定`.
 - `details` is the definition list; entries render in order. An entry with
   `people` renders as a list of "name (affiliation)".
-- `program` is a list of days, each with `slots`. A slot has a `time` plus
-  either `kind` (looked up in `strings.yml` → `session_kinds`) or
-  `speaker`/`affiliation`/`title`. `keynote: true` marks a keynote row.
+- `program` is either `TBA`, which renders as a one-line placeholder instead of
+  a table, or a list of days, each with `slots`. A slot has a `time` plus either
+  `kind` (looked up in `strings.yml` → `session_kinds`) or
+  `speaker`/`affiliation`/`title`. `keynote: true` marks a keynote row. The
+  file has a worked example in a comment.
 
 ## Constraints
 

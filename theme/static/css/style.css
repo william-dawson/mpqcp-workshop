@@ -203,6 +203,11 @@ tbody tr.keynote {
     white-space: nowrap;
 }
 
+.tba-note {
+    color: var(--color-muted);
+    font-style: italic;
+}
+
 /* --- Small screens ------------------------------------------------------- */
 
 @media (max-width: 40rem) {

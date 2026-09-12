@@ -14,6 +14,7 @@ language_names:
 en:
   focus_label: "Focus:"
   program_heading: Program
+  program_tba: The program is still being put together and will be posted here.
   time_column: Time
   speaker_column: Speaker
   registration_heading: Registration
@@ -34,6 +35,7 @@ en:
 ja:
   focus_label: "開催主旨："
   program_heading: プログラム
+  program_tba: プログラムは現在調整中です。決定次第こちらに掲載いたします。
   time_column: 時間
   speaker_column: 講演者
   registration_heading: 参加登録

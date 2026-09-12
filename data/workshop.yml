@@ -62,7 +62,7 @@ details:
 
   - id: support
     label: {en: "Support:", ja: "協賛："}
-    value: TBA
+    value: Stony Brook University.
 
   - id: date
     label: {en: "Date:", ja: "日時："}
@@ -74,7 +74,9 @@ details:
 
   - id: hotels
     label: {en: "Hotels Nearby:", ja: "近辺のホテル："}
-    value: TBA
+    value:
+      en: '<a href="https://www.portopia.co.jp/en/">Kobe Portopia Hotel</a>, <a href="https://www.ariston.jp/kobe/en/">Ariston Hotel Kobe</a>'
+      ja: '<a href="https://www.portopia.co.jp/">神戸ポートピアホテル</a>、<a href="https://www.ariston.jp/kobe/">アリストンホテル神戸</a>'
 
   - id: fee
     label: {en: "Registration Fee:", ja: "参加費："}
@@ -89,48 +91,27 @@ details:
     value: TBA
 
 # -----------------------------------------------------------------------------
-# Program. One block per day; each block has a heading and a list of slots.
-#
-# A slot is:  time, then either
-#   kind:    one of the shared labels defined in strings.yml (registration,
-#            welcome, lunch, break, poster, discussion, tba) -- no per-slot
-#            text needed, it is translated automatically; or
-#   speaker: name (per-language if written in kanji), affiliation, title.
-# Set `keynote: true` to mark a slot as a keynote.
+# Program. While this is TBA the page shows a short placeholder instead of a
+# table; it becomes a schedule as soon as a list of days is put here.
 # -----------------------------------------------------------------------------
-program:
-  - day: TBA
-    slots:
-      - {time: TBA, kind: registration}
-      - {time: TBA, kind: welcome}
-      - {time: TBA, kind: tba}
-      - {time: TBA, kind: lunch}
-      - {time: TBA, kind: tba, keynote: true}
-      - {time: TBA, kind: tba}
-      - {time: TBA, kind: break}
-      - {time: TBA, kind: tba}
-      - {time: TBA, kind: poster}
+program: TBA
 
-  - day: TBA
-    slots:
-      - {time: TBA, kind: registration}
-      - {time: TBA, kind: welcome}
-      - {time: TBA, kind: tba}
-      - {time: TBA, kind: break}
-      - {time: TBA, kind: tba}
-      - {time: TBA, kind: lunch}
-      - {time: TBA, kind: tba, keynote: true}
-      - {time: TBA, kind: tba}
-      - {time: TBA, kind: break}
-      - {time: TBA, kind: tba}
-      - {time: TBA, kind: discussion}
-
-# Example of a filled-in talk slot, for reference when the program firms up:
+# When the schedule firms up, replace the TBA above with a list of days:
 #
-#      - time: "10:00 - 10:30"
-#        speaker: {en: Taro Yamada, ja: 山田太郎}
-#        affiliation: {en: University of Tokyo, ja: 東京大学}
-#        title: A scalable algorithm for something interesting
+# program:
+#   - day: {en: "January 19th", ja: "1月19日"}
+#     slots:
+#       - {time: "09:00 - 09:40", kind: registration}
+#       - time: "10:00 - 10:30"
+#         speaker: {en: Taro Yamada, ja: 山田太郎}
+#         affiliation: {en: University of Tokyo, ja: 東京大学}
+#         title: A scalable algorithm for something interesting
+#       - {time: "13:00 - 13:45", kind: tba, keynote: true}
+#       - {time: "11:45 - 13:00", kind: lunch}
+#
+# `kind` is one of the labels in data/strings.yml -> session_kinds
+# (registration, welcome, lunch, break, poster, discussion, tba); it is
+# translated automatically, so those rows need no per-language text.
 
 # -----------------------------------------------------------------------------
 # Registration and contact

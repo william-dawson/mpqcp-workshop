@@ -1,7 +1,13 @@
-{# Program tables driven by `program` in data/workshop.yml. #}
+{#
+  The program, from `program` in data/workshop.yml. While that is still TBA
+  the section is a one-line placeholder rather than a table of empty rows.
+#}
 {% import "partials/macros.html" as m %}
 <section class="definition-card">
     <h2>{{ strings.program_heading }}</h2>
+    {% if m.is_tba(workshop.program, lang) or not workshop.program %}
+    <p class="tba-note">{{ strings.program_tba }}</p>
+    {% else %}
     {% for day in workshop.program %}
     <h3>{{ m.field(day.day, lang, strings) }}</h3>
     <div class="table-scroll">
@@ -32,4 +38,5 @@
     </table>
     </div>
     {% endfor %}
+    {% endif %}
 </section>

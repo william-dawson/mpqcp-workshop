@@ -8,7 +8,7 @@ per-language prose is the body of content/index-<lang>.md.
 
 The repository is the long-term home for the workshop, so when a later edition
 is added the plan is to move each year into its own folder; nothing here
-assumes there will only ever be one. See README.md.
+assumes there will only ever be one. See AGENTS.md.
 """
 
 from pathlib import Path

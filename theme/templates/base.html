@@ -1,0 +1,49 @@
+{#
+  Page frame: <head> metadata, language switcher, edition footer, and the
+  content block. All page text comes from the edition's workshop.yml
+  (`workshop`) and from data/strings.yml (`strings`).
+#}
+{% import "partials/macros.html" as m %}
+{# Per-page context: the edition, the page's language, and its UI text. #}
+{% set workshop = WORKSHOP %}
+{% set lang = page.lang %}
+{% set strings = STRINGS[lang] %}
+{% set languages = [] %}
+{% for code, name in STRINGS.language_names.items() %}
+    {% for version in [page] + page.translations if version.lang == code %}
+        {% do languages.append({'lang': code, 'name': name, 'url': version.url}) %}
+    {% endfor %}
+{% endfor %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ m.tr(workshop.name, lang) }} ({{ workshop.acronym }})</title>
+    <meta name="description" content="{{ m.tr(workshop.description, lang) }}">
+    <meta name="keywords" content="{{ m.tr(workshop.keywords, lang) }}">
+    <meta name="author" content="Computational Molecular Science Research Team">
+    {% if SITE_BASE_URL %}
+    <link rel="canonical" href="{{ SITE_BASE_URL | trim | trim('/') }}/{{ page.url }}">
+    {% endif %}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="{{ 'Language' if lang == 'en' else '言語' }}">
+            <ul>
+                {% for entry in languages %}
+                    <li>
+                        <a href="{{ SITEURL }}/{{ entry.url }}"{{ ' aria-current="page"' if entry.lang == lang }}
+                           lang="{{ entry.lang }}" hreflang="{{ entry.lang }}">{{ entry.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content" role="main">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

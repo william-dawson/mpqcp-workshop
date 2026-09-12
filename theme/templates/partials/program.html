@@ -1,0 +1,35 @@
+{# Program tables driven by `program` in data/workshop.yml. #}
+{% import "partials/macros.html" as m %}
+<section class="definition-card">
+    <h2>{{ strings.program_heading }}</h2>
+    {% for day in workshop.program %}
+    <h3>{{ m.field(day.day, lang, strings) }}</h3>
+    <div class="table-scroll">
+    <table>
+        <thead>
+            <tr><th scope="col">{{ strings.time_column }}</th><th scope="col">{{ strings.speaker_column }}</th></tr>
+        </thead>
+        <tbody>
+            {% for slot in day.slots %}
+            <tr{{ ' class="keynote"' if slot.keynote }}>
+                <td class="time">{{ m.field(slot.time, lang, strings) }}</td>
+                <td>
+                    {% if slot.keynote %}<strong>{{ strings.keynote_prefix }}</strong> {% endif %}
+                    {% if slot.speaker %}
+                        {{ m.tr(slot.speaker, lang) }}{% if slot.affiliation %} ({{ m.tr(slot.affiliation, lang) }}){% endif %}
+                        {% if slot.title %} <u>{{ m.tr(slot.title, lang) }}</u>{% endif %}
+                    {% elif slot.kind %}
+                        {% set label = strings.session_kinds.get(slot.kind, slot.kind) %}
+                        {% if slot.kind == 'tba' %}<span class="tba">{{ label }}</span>{% else %}{{ label }}{% endif %}
+                        {% if slot.note %} ({{ m.tr(slot.note, lang) }}){% endif %}
+                    {% else %}
+                        <span class="tba">{{ strings.tba }}</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endfor %}
+</section>

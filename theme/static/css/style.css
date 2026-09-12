@@ -1,0 +1,220 @@
+/* =============================================================================
+   MPQCP workshop site.
+
+   Design tokens live in :root so colours and spacing can be adjusted in one
+   place. The layout is a single column of white "cards" on a light ground,
+   and is sized for both the Latin and Japanese versions of the page.
+   ========================================================================== */
+
+:root {
+    --color-brand: #1D3D75;
+    --color-brand-light: #83A2C7;
+    --color-text: #333;
+    --color-muted: #6b6b6b;
+    --color-page: #f9f9f9;
+    --color-card: #ffffff;
+    --color-row-hover: #f4f6fa;
+    --color-tba-bg: #fff4d6;
+    --color-tba-text: #7a5a00;
+
+    --radius: 0.5rem;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --measure: 60rem;
+
+    --font-body: Arial, "Helvetica Neue", Helvetica,
+                 "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    --font-heading: Georgia, "Times New Roman", "Hiragino Mincho ProN",
+                    "Yu Mincho", serif;
+}
+
+/* --- Base ---------------------------------------------------------------- */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0 auto;
+    padding: 1.25rem;
+    max-width: var(--measure);
+    background-color: var(--color-page);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin: 1.125rem 0;
+}
+
+h1 { font-size: 1.3rem; }
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.1rem; }
+
+p, li, dd {
+    font-size: 1.125rem;
+    margin-bottom: 1.125rem;
+}
+
+a {
+    color: var(--color-brand);
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-brand-light);
+}
+
+:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}
+
+/* --- Navigation ---------------------------------------------------------- */
+
+header {
+    background-color: var(--color-brand);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 0.25rem;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a[aria-current="page"] {
+    background-color: var(--color-brand-light);
+    color: #fff;
+}
+
+/* --- Cards --------------------------------------------------------------- */
+
+.definition-card {
+    background-color: var(--color-card);
+    padding: 0.1rem 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 1rem auto;
+}
+
+/* Term on its own line, description indented underneath it. */
+.definition-card dt {
+    font-weight: bold;
+    margin-top: 0.75rem;
+}
+
+.definition-card dd {
+    margin: 0 0 0.5rem 1rem;
+}
+
+.definition-card dd > p {
+    margin: 0 0 0.5rem;
+}
+
+ul, ol {
+    margin: 0 0 1.5rem 1.5rem;
+    padding: 0;
+}
+
+ul li, ol li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.people {
+    margin-top: 0.5rem;
+}
+
+/* --- Program table ------------------------------------------------------- */
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: 0.5em;
+    vertical-align: top;
+}
+
+th {
+    background-color: var(--color-brand);
+    color: #fff;
+}
+
+td.time {
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background-color: var(--color-row-hover);
+}
+
+tbody tr.keynote {
+    background-color: #eef2f9;
+}
+
+/* --- Placeholders -------------------------------------------------------- */
+
+/* Anything left as TBA in data/workshop.yml is highlighted, so unfinished
+   items are obvious on the page as well as in the data file. */
+.tba {
+    background-color: var(--color-tba-bg);
+    color: var(--color-tba-text);
+    padding: 0 0.35em;
+    border-radius: 0.25rem;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+/* --- Small screens ------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+    body {
+        padding: 0.75rem;
+    }
+
+    p, li, dd {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 0.25rem;
+    }
+}

@@ -1,0 +1,52 @@
+# =============================================================================
+# UI strings. Everything the templates write on their own lives here, so the
+# page chrome can be translated without touching any HTML.
+#
+# Adding a language:  add a key to every mapping below, add a content/index-XX.md
+# file, and that is all -- the language menu is generated from the content files.
+# =============================================================================
+
+# Name shown in the language switcher, per language code.
+language_names:
+  en: English
+  ja: 日本語
+
+en:
+  focus_label: "Focus:"
+  program_heading: Program
+  time_column: Time
+  speaker_column: Speaker
+  registration_heading: Registration
+  registration_text: 'To register, please fill out the <a href="{url}">Google Form</a>.'
+  contact_heading: Contact
+  contact_label: "e-mail:"
+  tba: TBA
+  session_kinds:
+    registration: Registration Opens
+    welcome: Welcome and Logistics
+    lunch: Lunch Break
+    break: Break
+    poster: Poster Session
+    discussion: Discussion and Wrap Up
+    tba: To be announced
+  keynote_prefix: "Keynote:"
+
+ja:
+  focus_label: "開催主旨："
+  program_heading: プログラム
+  time_column: 時間
+  speaker_column: 講演者
+  registration_heading: 参加登録
+  registration_text: '<a href="{url}">Googleフォーム</a>にアクセスして、ワークショップへの参加登録をお願いいたします。'
+  contact_heading: お問い合わせ
+  contact_label: "e-mail:"
+  tba: 未定
+  session_kinds:
+    registration: 登録開始
+    welcome: 挨拶と案内
+    lunch: 昼食
+    break: 休憩
+    poster: ポスター発表
+    discussion: 議論とまとめ
+    tba: 未定
+  keynote_prefix: "Keynote:"

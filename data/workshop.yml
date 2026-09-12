@@ -1,0 +1,142 @@
+# =============================================================================
+# MPQCP workshop data -- the single source of truth for the whole site.
+#
+# HOW TO EDIT
+#   * Any value may be either a plain string (shared by every language) or a
+#     mapping of language code -> string (e.g. {en: "Free", ja: "無料"}).
+#     Use a plain string whenever the text is the same in both languages
+#     (URLs, times, names written in Latin script, English talk titles...).
+#   * Values may contain HTML; it is rendered as-is.
+#   * Keep Japanese text on a single line: YAML folded blocks (>-) join lines
+#     with a space, which is wrong for Japanese.
+#   * Anything still set to `TBA` shows up on the page as a highlighted
+#     placeholder, so unfinished items are easy to spot.
+#
+# See README.md for the yearly update checklist.
+# =============================================================================
+
+edition: 8            # 8th workshop in the series
+year: 2027
+acronym: MPQCP 2027
+
+name:
+  en: International Workshop on Massively Parallel Programming for Quantum Chemistry and Physics
+  ja: International Workshop on Massively Parallel Programming for Quantum Chemistry and Physics
+
+description:
+  en: Information about the International Workshop on Massively Parallel Programming for Quantum Chemistry and Physics, to be held in Japan in 2027.
+  ja: 2027年に日本で開催されるInternational Workshop on Massively Parallel Programming for Quantum Chemistry and Physicsワークショップに関する情報。
+
+keywords:
+  en: Quantum Chemistry, Workshop, Parallel Programming, Supercomputer, MPQCP 2027
+  ja: 量子化学、ワークショップ、並列プログラミング、スーパーコンピュータ、MPQCP 2027
+
+# -----------------------------------------------------------------------------
+# The definition list at the top of the page. Entries render in this order;
+# delete an entry to drop the row, add one to introduce a new row.
+# -----------------------------------------------------------------------------
+details:
+  - id: committee
+    label: {en: "Committee:", ja: "世話人："}
+    # `people` renders as a bulleted list of "name (affiliation)".
+    people:
+      - name: {en: Hideo Sekino, ja: 関野秀男}
+        affiliation: Institute for Advanced Computational Science, IACS, Stony Brook Univ.
+      - name: Robert Harrison
+        affiliation: Stony Brook Univ.
+      - name: {en: Takahito Nakajima, ja: 中嶋隆人}
+        affiliation: {en: RIKEN R-CCS, ja: 理研CCS}
+      - name: William Dawson
+        affiliation: {en: RIKEN R-CCS, ja: 理研CCS}
+      - name: {en: Muneaki Kamiya, ja: 神谷宗明}
+        affiliation: {en: Gifu University, ja: 岐阜大学}
+
+  - id: organizers
+    label: {en: "Organizers:", ja: "主催："}
+    value:
+      en: >-
+        RIKEN Center for Computational Science
+        (<a href="http://molsc.riken.jp">Computational Molecular Science Research Team</a>,
+        <a href="https://www.r-ccs.riken.jp/en/research/aspd/msaipdu/">Materials Science Application Interface Platform Development Unit</a>).
+      ja: '理化学研究所 計算科学研究センター (<a href="http://molsc.riken.jp">量子系分子科学研究チーム</a>, <a href="https://www.r-ccs.riken.jp/research/aspd/msaipdu/">材料・物性アプリインターフェース基盤開発ユニット</a>)。'
+
+  - id: support
+    label: {en: "Support:", ja: "協賛："}
+    value: TBA
+
+  - id: date
+    label: {en: "Date:", ja: "日時："}
+    value: TBA
+
+  - id: venue
+    label: {en: "Venue:", ja: "場所："}
+    value: TBA
+
+  - id: hotels
+    label: {en: "Hotels Nearby:", ja: "近辺のホテル："}
+    value: TBA
+
+  - id: fee
+    label: {en: "Registration Fee:", ja: "参加費："}
+    value: TBA
+
+  - id: deadline
+    label: {en: "Registration Deadline:", ja: "事前申込締切："}
+    value: TBA
+
+  - id: security
+    label: {en: "Entrance Security Requirements:", ja: "入構について："}
+    value: TBA
+
+# -----------------------------------------------------------------------------
+# Program. One block per day; each block has a heading and a list of slots.
+#
+# A slot is:  time, then either
+#   kind:    one of the shared labels defined in strings.yml (registration,
+#            welcome, lunch, break, poster, discussion, tba) -- no per-slot
+#            text needed, it is translated automatically; or
+#   speaker: name (per-language if written in kanji), affiliation, title.
+# Set `keynote: true` to mark a slot as a keynote.
+# -----------------------------------------------------------------------------
+program:
+  - day: TBA
+    slots:
+      - {time: TBA, kind: registration}
+      - {time: TBA, kind: welcome}
+      - {time: TBA, kind: tba}
+      - {time: TBA, kind: lunch}
+      - {time: TBA, kind: tba, keynote: true}
+      - {time: TBA, kind: tba}
+      - {time: TBA, kind: break}
+      - {time: TBA, kind: tba}
+      - {time: TBA, kind: poster}
+
+  - day: TBA
+    slots:
+      - {time: TBA, kind: registration}
+      - {time: TBA, kind: welcome}
+      - {time: TBA, kind: tba}
+      - {time: TBA, kind: break}
+      - {time: TBA, kind: tba}
+      - {time: TBA, kind: lunch}
+      - {time: TBA, kind: tba, keynote: true}
+      - {time: TBA, kind: tba}
+      - {time: TBA, kind: break}
+      - {time: TBA, kind: tba}
+      - {time: TBA, kind: discussion}
+
+# Example of a filled-in talk slot, for reference when the program firms up:
+#
+#      - time: "10:00 - 10:30"
+#        speaker: {en: Taro Yamada, ja: 山田太郎}
+#        affiliation: {en: University of Tokyo, ja: 東京大学}
+#        title: A scalable algorithm for something interesting
+
+# -----------------------------------------------------------------------------
+# Registration and contact
+# -----------------------------------------------------------------------------
+registration:
+  url: TBA          # Google Form URL; the section says "TBA" until this is set
+
+contact:
+  email: nakajima [at] riken [dot] jp

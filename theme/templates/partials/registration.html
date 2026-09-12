@@ -1,0 +1,15 @@
+{# Registration link and contact address, from data/workshop.yml. #}
+{% import "partials/macros.html" as m %}
+<section class="definition-card">
+    <h2>{{ strings.registration_heading }}</h2>
+    <p>
+    {% if m.is_tba(workshop.registration.url, lang) %}
+        <span class="tba">{{ strings.tba }}</span>
+    {% else %}
+        {{ strings.registration_text | replace('{url}', m.tr(workshop.registration.url, lang)) }}
+    {% endif %}
+    </p>
+
+    <h2>{{ strings.contact_heading }}</h2>
+    <p>{{ strings.contact_label }} {{ m.field(workshop.contact.email, lang, strings) }}</p>
+</section>

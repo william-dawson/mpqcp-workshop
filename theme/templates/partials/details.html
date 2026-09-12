@@ -1,0 +1,16 @@
+{# Definition-list rows driven by `details` in data/workshop.yml. #}
+{% import "partials/macros.html" as m %}
+{% for item in workshop.details %}
+    <dt>{{ m.tr(item.label, lang) }}</dt>
+    <dd>
+        {% if item.people %}
+        <ul class="people">
+            {% for person in item.people %}
+            <li>{{ m.tr(person.name, lang) }}{% if person.affiliation %} ({{ m.tr(person.affiliation, lang) }}){% endif %}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        {{ m.field(item.value, lang, strings) }}
+        {% endif %}
+    </dd>
+{% endfor %}

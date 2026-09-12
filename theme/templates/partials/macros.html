@@ -1,0 +1,33 @@
+{#
+  Helpers shared by every template.
+
+  tr(value, lang)
+      Resolve a value from data/*.yml for one language. A plain string is
+      shared by all languages; a mapping {en: ..., ja: ...} is looked up by
+      language code, falling back to English so a missing translation degrades
+      to readable text instead of an empty page.
+
+  field(value, lang, strings)
+      tr() plus placeholder handling: the literal value TBA renders as a
+      localized, visually highlighted "to be announced" marker.
+#}
+
+{%- macro tr(value, lang) -%}
+{%- if value is mapping -%}
+{{- value.get(lang, value.get('en', '')) -}}
+{%- else -%}
+{{- value if value is not none else '' -}}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro is_tba(value, lang) -%}
+{{- 'yes' if tr(value, lang) | trim | upper == 'TBA' else '' -}}
+{%- endmacro -%}
+
+{%- macro field(value, lang, strings) -%}
+{%- if is_tba(value, lang) -%}
+<span class="tba">{{ strings.tba }}</span>
+{%- else -%}
+{{- tr(value, lang) -}}
+{%- endif -%}
+{%- endmacro -%}

@@ -47,6 +47,10 @@ or a per-language mapping (missing languages fall back to `en`):
   `kind` (looked up in `strings.yml` → `session_kinds`) or
   `speaker`/`affiliation`/`title`. `keynote: true` marks a keynote row. The
   file has a worked example in a comment.
+- `past_editions` is a list of `{year, url}`, newest first, rendered as a row of
+  links at the bottom of the page. Older editions are still hosted on
+  molsc.riken.jp; 2018 has no Japanese page, so its `url` is a single string and
+  both languages get the English one.
 
 ## Constraints
 

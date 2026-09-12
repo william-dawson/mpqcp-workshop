@@ -203,6 +203,11 @@ tbody tr.keynote {
     white-space: nowrap;
 }
 
+.past-editions a {
+    white-space: nowrap;
+    margin-right: 0.25rem;
+}
+
 .tba-note {
     color: var(--color-muted);
     font-style: italic;

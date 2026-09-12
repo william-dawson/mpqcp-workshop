@@ -114,6 +114,25 @@ program: TBA
 # translated automatically, so those rows need no per-language text.
 
 # -----------------------------------------------------------------------------
+# Earlier editions of the workshop, newest first. These pages are still hosted
+# on the old site. 2018 has no Japanese version, so its link is written as a
+# single string and both languages get the English page.
+# -----------------------------------------------------------------------------
+past_editions:
+  - year: 2026
+    url: {en: "https://molsc.riken.jp/mpqcp2026_ws_en.html", ja: "https://molsc.riken.jp/mpqcp2026_ws_ja.html"}
+  - year: 2025
+    url: {en: "https://molsc.riken.jp/mpqcp2025_ws_en.html", ja: "https://molsc.riken.jp/mpqcp2025_ws_ja.html"}
+  - year: 2024
+    url: {en: "https://molsc.riken.jp/mpqcp2024_ws_en.html", ja: "https://molsc.riken.jp/mpqcp2024_ws_ja.html"}
+  - year: 2020
+    url: {en: "https://molsc.riken.jp/mpqcp2020_ws_en.html", ja: "https://molsc.riken.jp/mpqcp2020_ws_ja.html"}
+  - year: 2019
+    url: {en: "https://molsc.riken.jp/mpqcp2019_ws_en.html", ja: "https://molsc.riken.jp/mpqcp2019_ws_ja.html"}
+  - year: 2018
+    url: "https://molsc.riken.jp/mpqcp2018_ws_en.html"
+
+# -----------------------------------------------------------------------------
 # Registration and contact
 # -----------------------------------------------------------------------------
 registration:

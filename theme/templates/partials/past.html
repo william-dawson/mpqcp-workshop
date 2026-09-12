@@ -1,0 +1,16 @@
+{#
+  Links to earlier editions, from `past_editions` in data/workshop.yml. An
+  entry's `url` follows the usual convention: one string shared by every
+  language, or a per-language mapping.
+#}
+{% import "partials/macros.html" as m %}
+{% if workshop.past_editions %}
+<section class="definition-card">
+    <h2>{{ strings.past_editions_heading }}</h2>
+    <p class="past-editions">
+        {% for edition in workshop.past_editions %}
+        <a href="{{ m.tr(edition.url, lang) }}">{{ edition.year }}</a>{% if not loop.last %} · {% endif %}
+        {% endfor %}
+    </p>
+</section>
+{% endif %}

@@ -20,6 +20,7 @@ en:
   registration_heading: Registration
   registration_text: 'To register, please fill out the <a href="{url}">Google Form</a>.'
   contact_heading: Contact
+  past_editions_heading: Past Editions
   contact_label: "e-mail:"
   tba: TBA
   session_kinds:
@@ -41,6 +42,7 @@ ja:
   registration_heading: 参加登録
   registration_text: '<a href="{url}">Googleフォーム</a>にアクセスして、ワークショップへの参加登録をお願いいたします。'
   contact_heading: お問い合わせ
+  past_editions_heading: 過去の開催
   contact_label: "e-mail:"
   tba: 未定
   session_kinds:

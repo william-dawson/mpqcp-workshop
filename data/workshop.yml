@@ -138,7 +138,7 @@ past_editions:
 # Registration and contact
 # -----------------------------------------------------------------------------
 registration:
-  url: TBA          # Google Form URL; the section says "TBA" until this is set
+  url: https://forms.gle/Uy5Hox1FeDhMy8CY9
 
 contact:
   email: nakajima [at] riken [dot] jp

@@ -66,7 +66,9 @@ details:
 
   - id: date
     label: {en: "Date:", ja: "日時："}
-    value: TBA
+    value:
+      en: "January 25th - January 26th, 2027."
+      ja: "2027年1月25日 (月)～26日 (火)。"
 
   - id: venue
     label: {en: "Venue:", ja: "場所："}
@@ -80,11 +82,11 @@ details:
 
   - id: fee
     label: {en: "Registration Fee:", ja: "参加費："}
-    value: TBA
+    value: {en: "Free", ja: "無料"}
 
   - id: deadline
     label: {en: "Registration Deadline:", ja: "事前申込締切："}
-    value: TBA
+    value: {en: "January 20th, 2027.", ja: "2027年1月20日 (水)。"}
 
   - id: security
     label: {en: "Entrance Security Requirements:", ja: "入構について："}

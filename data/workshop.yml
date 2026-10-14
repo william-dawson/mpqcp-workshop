@@ -121,8 +121,8 @@ program: TBA
 
 # -----------------------------------------------------------------------------
 # Earlier editions of the workshop, newest first. These pages are still hosted
-# on the old site. 2018 has no Japanese version, so its link is written as a
-# single string and both languages get the English page.
+# on the old site. 2017 has only a Japanese page, so its URL is shared by both
+# languages.
 # -----------------------------------------------------------------------------
 past_editions:
   - year: 2026
@@ -136,7 +136,9 @@ past_editions:
   - year: 2019
     url: {en: "https://molsc.riken.jp/mpqcp2019_ws_en.html", ja: "https://molsc.riken.jp/mpqcp2019_ws_ja.html"}
   - year: 2018
-    url: "https://molsc.riken.jp/mpqcp2018_ws_en.html"
+    url: {en: "https://molsc.riken.jp/mpqcp2018_ws_en.html", ja: "https://molsc.riken.jp/mpqcp2018_ws.html"}
+  - year: 2017
+    url: "https://molsc.riken.jp/mpqcp2017_ws.html"
 
 # -----------------------------------------------------------------------------
 # Registration and contact

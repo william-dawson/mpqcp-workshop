@@ -49,8 +49,8 @@ or a per-language mapping (missing languages fall back to `en`):
   file has a worked example in a comment.
 - `past_editions` is a list of `{year, url}`, newest first, rendered as a row of
   links at the bottom of the page. Older editions are still hosted on
-  molsc.riken.jp; 2018 has no Japanese page, so its `url` is a single string and
-  both languages get the English one.
+  molsc.riken.jp; 2017 has only a Japanese page, so its `url` is a single string
+  shared by both languages.
 
 ## Constraints
 

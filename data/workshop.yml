@@ -90,7 +90,9 @@ details:
 
   - id: security
     label: {en: "Entrance Security Requirements:", ja: "入構について："}
-    value: TBA
+    value:
+      en: "For foreign participants, please bring your passport or residence card. Domestic participants should bring a business card or student ID."
+      ja: "外国人参加者の場合は、パスポートまたは在留カードをご持参ください。国内参加者は名刺または学生証をお持ちください。"
 
 # -----------------------------------------------------------------------------
 # Program. While this is TBA the page shows a short placeholder instead of a

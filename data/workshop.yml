@@ -72,7 +72,9 @@ details:
 
   - id: venue
     label: {en: "Venue:", ja: "場所："}
-    value: TBA
+    value:
+      en: '<a href="https://www.r-ccs.riken.jp/en/directions/">RIKEN Center for Computational Science</a>'
+      ja: '<a href="https://www.r-ccs.riken.jp/access/">国立研究開発法人理化学研究所 計算科学研究センター</a>'
 
   - id: hotels
     label: {en: "Hotels Nearby:", ja: "近辺のホテル："}

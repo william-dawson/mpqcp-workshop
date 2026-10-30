@@ -45,9 +45,9 @@ details:
       - name: Robert Harrison
         affiliation: Stony Brook Univ.
       - name: {en: Takahito Nakajima, ja: 中嶋隆人}
-        affiliation: {en: RIKEN R-CCS, ja: 理研CCS}
+        affiliation: {en: RIKEN Center for Computational Science, ja: 理化学研究所 計算科学研究センター}
       - name: William Dawson
-        affiliation: {en: RIKEN R-CCS, ja: 理研CCS}
+        affiliation: {en: RIKEN Center for Computational Science, ja: 理化学研究所 計算科学研究センター}
       - name: {en: Muneaki Kamiya, ja: 神谷宗明}
         affiliation: {en: Gifu University, ja: 岐阜大学}
 
@@ -95,6 +95,55 @@ details:
     value:
       en: "For foreign participants, please bring your passport or residence card. Domestic participants should bring a business card or student ID."
       ja: "外国人参加者の場合は、パスポートまたは在留カードをご持参ください。国内参加者は名刺または学生証をお持ちください。"
+
+# -----------------------------------------------------------------------------
+# Invited speakers, shown at the bottom of the Program section. This is a
+# stopgap while the schedule is still being assembled; when the timetable is
+# ready, replace `program: TBA` with the real days/slots and delete this
+# block -- the list is rendered only while `speakers` exists.
+#
+# Affiliations verified against researchmap / institutional pages (Oct 2026).
+# Sorted alphabetically by given name, the way the names are displayed.
+# Japanese names follow the committee style (no space); 許 恩華 keeps the
+# space as on the 2026 page.
+# -----------------------------------------------------------------------------
+speakers:
+  # He moved to Academia Sinica (Taipei) in 2026 but NIMS still lists him;
+  # NIMS is how we are communicating with him. Re-check before publishing.
+  - name: Aaditya Manjanath
+    affiliation: {en: National Institute for Materials Science, ja: 物質・材料研究機構}
+  - name: {en: Ayaki Sunaga, ja: 砂賀彩光}
+    affiliation: {en: Hokkaido University, ja: 北海道大学}
+  - name: {en: Ayako Nakata, ja: 中田彩子}
+    affiliation: {en: National Institute for Materials Science, ja: 物質・材料研究機構}
+  - name: {en: Chinami Takashima, ja: 高島千波}
+    affiliation: {en: Waseda University, ja: 早稲田大学}
+  - name: {en: Enhua Xu, ja: 許 恩華}
+    affiliation: {en: RIKEN Center for Computational Science, ja: 理化学研究所 計算科学研究センター}
+  - name: Florian Bischoff
+    affiliation: Humboldt-Universität zu Berlin
+  - name: Hannes Borchert
+    affiliation: Stony Brook University
+  - name: {en: Hirofumi Yanagisawa, ja: 栁澤啓史}
+    affiliation: {en: Shizuoka University, ja: 静岡大学}
+  - name: {en: Hiroshi Shinaoka, ja: 品岡寛}
+    affiliation: {en: Saitama University, ja: 埼玉大学}
+  - name: Joseph Schuchart
+    affiliation: Stony Brook University
+  - name: {en: Junya Onishi, ja: 大西順也}
+    affiliation: {en: RIKEN Center for Computational Science, ja: 理化学研究所 計算科学研究センター}
+  - name: {en: Masato Kobayashi, ja: 小林正人}
+    affiliation: {en: Hokkaido University, ja: 北海道大学}
+  - name: {en: Takeshi Yoshikawa, ja: 吉川武司}
+    affiliation: {en: Toho University, ja: 東邦大学}
+  - name: {en: Tomohito Otobe, ja: 乙部智仁}
+    affiliation: {en: National Institutes for Quantum Science and Technology, ja: 量子科学技術研究開発機構}
+  - name: {en: Tomomi Shimazaki, ja: 島崎智実}
+    affiliation: {en: Yokohama City University, ja: 横浜市立大学}
+  - name: {en: Tomonori Shirakawa, ja: 白川知功}
+    affiliation: {en: RIKEN Center for Computational Science, ja: 理化学研究所 計算科学研究センター}
+  - name: {en: Youhei Yamaji, ja: 山地洋平}
+    affiliation: {en: National Institute for Materials Science, ja: 物質・材料研究機構}
 
 # -----------------------------------------------------------------------------
 # Program. While this is TBA the page shows a short placeholder instead of a

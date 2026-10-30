@@ -1,6 +1,8 @@
 {#
   The program, from `program` in data/workshop.yml. While that is still TBA
   the section is a one-line placeholder rather than a table of empty rows.
+  A `speakers` list in workshop.yml is rendered below the schedule (or below
+  the placeholder) until the real program replaces it.
 #}
 {% import "partials/macros.html" as m %}
 <section class="definition-card">
@@ -38,5 +40,13 @@
     </table>
     </div>
     {% endfor %}
+    {% endif %}
+    {% if workshop.speakers %}
+    <h3>{{ strings.invited_speakers_heading }}</h3>
+    <ul class="people">
+        {% for person in workshop.speakers %}
+        <li>{{ m.tr(person.name, lang) }}{% if person.affiliation %} ({{ m.tr(person.affiliation, lang) }}){% endif %}</li>
+        {% endfor %}
+    </ul>
     {% endif %}
 </section>
